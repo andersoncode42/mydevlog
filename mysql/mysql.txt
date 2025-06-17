@@ -1,0 +1,52 @@
+
+
+Download
+https://dev.mysql.com/downloads/installer
+
+Porta default: 3306
+
+Porta do protocolo X: 33060
+Utilizado para operações de CRUD com documentos Json
+
+C:\ProgramData\MySQL\MySQL Server 8.0\Data
+
+
+LOGS
+
+Error Log - Servidor.err
+General Log - Ative apenas para depuração - Servidor.log
+Slow Query Log - Servidor-slow.log
+Binary Log - Usado para replicação - Servidor-bin 
+
+
+SHOW STATUS - Mostra os valores setados das variaveis de sistemas
+Scopo de variáveis: Global(todo mysql) Session(apenas para a sessão)
+                    dinâmicas(vc não precisa reiniciar o servidor para as alterações fazerem efeito)
+
+<data>/My.ini (windows)
+<data>/my.cnf (linux)
+
+Diretivas [mysqld] - Variáveis globais [client] - Variáveis locais
+
+
+
+
+max_connections - Quantidade de conexões - padrão: 151
+
+SHOW VARIABLES LIKE 'max_connections';
+
+PEgando a quantidade de conexões
+SHOW STATUS WHERE variable_name='Threads_connected';
+
+SHOW PROCESSLIST;
+
+SET GLOBAL max_connections = 6;
+
+
+
+
+
+
+
+
+
